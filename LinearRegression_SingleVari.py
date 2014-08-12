@@ -26,6 +26,17 @@ def gradientDescentUtil(X, y, theta):
 
         return gradientDescent(X, y, theta, alpha, iterations)
         
+#We can also use this normal equation method to solve for theta (If number of features are less)
+def solveForTheta(X, y, theta):
+    m = y.size
+    tranOfX = X.T
+    temp = tranOfX.dot(X)
+    temp2 = inv(temp)
+    temp3 = temp2.dot(tranOfX)
+    theta = temp3.dot(y)
+    return theta
+    
+    
 def plotInputData(data):
         scatter(data[:, 0], data[:, 1], marker='o', c='b')
         title('Profits distribution')
