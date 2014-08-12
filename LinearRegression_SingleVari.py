@@ -58,7 +58,7 @@ def featureManipulation(data):
 
 def main():
         #Load the dataset
-        data = loadtxt('input.txt', delimiter=',')
+        data = loadtxt('LinearRegression_SingleVari_input.txt', delimiter=',')
         plotInputData(data)
 
         #feature manipulation
