@@ -56,7 +56,7 @@ def plotInputData(data):
     ax.set_xlabel('Size of the House')
     ax.set_ylabel('Number of Bedrooms')
     ax.set_zlabel('Price of the House')
-    #plt.show()
+    plt.show()
     
 def featureManipulation(data):
     #feature extractions
@@ -77,7 +77,7 @@ def predictValues(theta,mean_r,std_r,size,bhk):
 
 def main():
         #Load the dataset
-        data = loadtxt('ex1data2.txt', delimiter=',')
+        data = loadtxt('LinearRegression_MultiVar_input.txt', delimiter=',')
         plotInputData(data)
 
         #feature manipulation
