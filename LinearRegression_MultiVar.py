@@ -45,7 +45,17 @@ def gradientDescentUtil(X, y, theta):
         alpha = 0.01
 
         return gradientDescent(X, y, theta, alpha, iterations)
-        
+
+#We can also use this normal equation method to solve for theta (If number of input features are less)
+def solveForTheta(X, y, theta):
+    m = y.size
+    tranOfX = X.T
+    temp = tranOfX.dot(X)
+    temp2 = inv(temp)
+    temp3 = temp2.dot(tranOfX)
+    theta = temp3.dot(y)
+    return theta
+    
 def plotInputData(data):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
